@@ -10,34 +10,28 @@ Load the CSV into a DataFrame.
 
 ### Step 2: 
  Print the number of contents to be displayed using df.head().
-
-
 ### Step 3: 
 The number of rows returned is defined in Pandas option settings.
-
 ### Step 4:  
 Check your system's maximum column with the pd.options.display.max_column statement.
-
 ### Step 5: 
 Increase the maximum number of rows to display the entire DataFrame.
 
 ## PROGRAM:
-`````
-#To write a python program for reading content from a CSV file.
+```
+#Program for copying the contents from one file to another file
 #Developed by: KATHIRESAN K
-#Register Number: 212223110021
-
-import pandas as pd
-df = pd.read_csv('nba.csv')
-print(df.head(10))
-print(df.tail())
-print("Number of rows:",len(df.axes[0]))
-print("Number of columns:",len(df.axes[1]))
-```````
-
+#RegisterNumber: 212223110021
+def copy(fname,newfile):
+    with open(fname) as fp:
+        with open(newfile,'w') as fp1:
+            data=fp.read()
+            fp1.write(data)
+copy("textfile1.txt","textfile2.txt")
+```
 ### OUTPUT:
-
-![image](https://github.com/Balaji-Jothiramalingam/Copy-File/assets/114234865/f2370406-5c86-4f2b-9a73-810de48fa8b5)
+![Screenshot 2024-05-14 051135](https://github.com/Kathiresan-23013376/Copy-File/assets/150008375/b4aa968b-3442-42b8-b108-e826b019ba9a)
+![Screenshot 2024-05-14 051143](https://github.com/Kathiresan-23013376/Copy-File/assets/150008375/73859c7c-4644-4fd0-9fa1-41783c0f57c7)
 
 
 ## RESULT:
